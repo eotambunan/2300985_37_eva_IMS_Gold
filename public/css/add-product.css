@@ -1,0 +1,16 @@
+body{
+    background-color: rgb(201, 200, 200);
+    font-family: 'Concert One', cursive;
+    font-size: 20px;
+}
+
+.form-add-product{
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 20px;
+    box-shadow: 10px 10px 30px green;
+}
+
+.logo-image img{
+    width: 100%;
+}

@@ -1,0 +1,36 @@
+body{
+    background-color: rgb(201, 200, 200);
+    font-family: 'Concert One', cursive;
+    font-size: 20px;
+}
+
+.logo-image img{
+    width: 100%;
+}
+
+.table-product{
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 20px;
+    box-shadow: 10px 10px 30px green;
+}
+
+tr,td{
+    text-align: center;
+}
+
+thead{
+    font-family: 'Phudu', cursive;
+    font-size: 25px;
+    text-decoration: underline;
+}
+
+thead,.td-price,.td-action{
+    text-align: center;
+}
+.modal-body h5{
+    color: red;
+    display: inline;
+    width: 100%;
+    display: none;
+}

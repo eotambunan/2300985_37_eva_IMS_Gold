@@ -1,0 +1,179 @@
+:root{
+    --hijau-lemon: rgb(81, 62, 255);
+}
+*{
+    z-index: 2;
+}
+body{
+    font-family: 'Phudu', cursive;
+    /* height: 2000px; */
+}
+
+section{
+    padding-top: 4rem;
+}
+
+.navbar::before{
+    content:"";
+    background-color: blue;
+
+}
+.navbar{
+    font-size: 20px;
+    z-index: 3;
+    background-color: rgba(36, 17, 204, 0.7);
+}
+.active{
+    font-weight: bold;
+    text-decoration: underline;
+}
+.navbar-logo{
+    font-weight: 700;
+}
+.button-login{
+    background: linear-gradient(to top, #c2c2c2, #ffffff);    
+    color: black;
+    border-radius: 50px;
+}
+.button-daftar{
+    border: none;
+    background-color: transparent;
+}
+
+#header span{
+    font-style: italic;
+    opacity: .7;
+}
+
+#header .dropdown{
+    width: 120%;
+}
+
+#header .dropdown-menu{
+    width: 120%;
+}
+#header .category{
+    font-family: 'Concert One', cursive;
+    width: 10vh;
+}
+
+#product .card{
+    height: 110%;
+    border: 2px solid black;
+    border-radius: 6px;
+}
+#product h5{
+    font-size: 15px;
+}
+#product .author{
+    font-size: 10px;
+    font-style: italic;
+    margin-bottom: -2px;
+    margin-top: 50px;
+}
+#product .price{
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 0;
+    display: inline-block;
+    width: 50%;
+    background-color: rgb(37, 223, 37);
+    border: 2px solid green;
+    border-radius: 10px;
+}
+
+#modal .modal{
+    justify-content: center;
+}
+
+#modal .title{
+    height: 40%;
+}
+
+#modal .image{
+    height: 30vh;
+    width: 45%;
+    border: 6px solid var(--hijau-lemon);
+    border-radius: 10px;
+}
+
+#modal .detail{
+    height: 30vh;
+    width: 45%;
+    margin-left: 10px;
+    border: 6px solid var(--hijau-lemon);
+    border-radius: 10px;
+}
+
+
+#modal .price{
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 0;
+    display: inline-block;
+    width: 50%;
+    background-color: rgb(37, 223, 37);
+    border: 2px solid green;
+    border-radius: 10px;
+}
+
+#modal .synopsis{
+    height: 30vh;
+    background-color: rgba(148, 137, 252, 0.3);
+    font-family: 'Concert One', cursive;
+    border: 6px solid var(--hijau-lemon);
+    border-radius: 10px;
+}
+#modal .synopsis p{
+    font-family: 'Concert One', cursive;
+    letter-spacing: -1px;
+    text-indent: 10%;
+    text-align: justify;
+}
+
+#pagination{
+    color: var(--hijau-lemon);
+    font-family: 'Concert One', cursive;
+}
+
+.simple-pagination li{
+    display: inline-block;
+    margin-left: 10px;
+}
+
+#footer{
+    background-color: yellow;
+    height: 5vh;
+}
+#footer img{
+    width: 8vh;
+}
+
+/* .discount{
+    position: absolute;
+    width: 20%;
+    top: 0;
+    right: 0;
+}
+.discount-value{
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+} */
+.discount{
+    /* display: inline-block; */
+    position: relative;
+    width: 60px;
+    height: 60px;
+    justify-content: center;
+}
+.discount-tag{
+    /* position: absolute; */
+    width: 100%;
+}
+.discount-value{
+    color: white;
+    z-index: 1;
+    font-size: 17px;
+}

@@ -1,0 +1,9 @@
+body{
+    background-color: rgb(201, 200, 200);
+    font-family: 'Concert One', cursive;
+    font-size: 20px;
+}
+
+.logo-image img{
+    width: 100%;
+}

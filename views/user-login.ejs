@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Acikiwir</title>
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/user-login.css" />
+  </head>
+  <body>
+    <img src="/image/design_images/assets/logo.png" alt="" class="position-absolute top-0 start-0 m-1" />
+      <div class="login-page">
+        <div class="form">
+          <form class="register-form">
+            <input type="text" placeholder="name" id="name-reg"/>
+            <input type="email" placeholder="email address" id="email-reg"/>
+            <input type="password" placeholder="password" id="password-reg"/>
+            <button id="registration">create</button>
+            <p class="message">Already registered? <a href="#">Sign In</a></p>
+          </form>
+          <form class="login-form">
+            <input type="email" placeholder="E-mail" id="email"/>
+            <input type="password" placeholder="Password" id="password"/>
+            <button id="login">login</button>
+            <p class="message">Not registered? <a href="#">Create an account</a></p>
+          </form>
+        </div>
+        <div id="information">
+          <h4 id="notification"></h4>          
+        </div>
+      </div>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  <script src="/js/user-login.js"></script>
+</html>

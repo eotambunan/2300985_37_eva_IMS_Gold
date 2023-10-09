@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Product</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Phudu:wght@300;400;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/edit-product.css">
+    <link rel="stylesheet" href="/css/sidebar.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <script src="/bootstraps/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h1>Edit Product</h1>
+      </div>
+      <div class="col-md-1 offset-md-5 logo-image">
+        <img src="/image/design_images/assets/logo.png" alt="404" />
+      </div>
+    </div>
+  </div>
+
+    <section id="edit">
+      <div class="row">
+        <%- include("sidebar.ejs") %>
+        <div class="col-md-8 p-5 form-edit-product mt-5 form-edit-product">
+          <form action="/admin/edit/<%= data.id %>" method="post" enctype="multipart/form-data">
+              <div class="mb-3">
+                <label for="title" class="form-label">Title :</label>
+                <input type="text" class="form-control" value="<%= data.title %>" id="title" name="title">
+              </div>
+              <div class="mb-3">
+                <label for="title" class="form-label">Writer :</label>
+                <input type="text" class="form-control" value="<%= data.writer %>" id="title" name="writer">
+              </div>
+              <div class="mb-3">
+                <label for="category" class="form-label">Category :</label>
+                <div class="input-group mb-3">
+                  <select class="form-select category" id="category" name="category" data-category = "<%= data.category %>">
+                    <option>Novel</option>
+                    <option>Comic</option>
+                    <option>Children</option>
+                    <option>School</option>
+                    <option>Religion</option>
+                    <option>Biography</option>
+                  </select>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="year" class="form-label">Year :</label>
+                <select class="form-select year" id="year" name="year" data-year = "<%= data.year %>">
+                  <option>2020</option>
+                  <option>2021</option>
+                  <option>2022</option>
+                  <option>2023</option>
+                  <option>2024</option>
+                  <option>2025</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="title" class="form-label">Price :</label>
+                <input type="text" class="form-control" value="<%= data.price %>" id="title" name="price">
+              </div>
+              <div class="mb-3">
+                <label for="title" class="form-label">Synopsis :</label>
+                <input type="text" class="form-control" value="<%= data.synopsis %>" id="title" name="synopsis">
+              </div>
+              <div class="mb-3">
+                <label for="title" class="form-label">Image :</label>
+                <input type="file" class="form-control" value="<%= data.image %>" id="title" name="image">
+              </div>
+              <button type="submit" class="btn btn-success">Save</button>
+            </form>
+        </div>
+    </section>
+    <%- include("footer.ejs") %>
+</body>
+<script src="/js/admin-edit.js"></script>
+</html>
+

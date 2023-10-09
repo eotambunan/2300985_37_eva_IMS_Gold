@@ -1,0 +1,31 @@
+.sidebar{
+    height: 100vh;
+    background-color: rgb(201, 200, 200);
+}
+.sidebar-content{
+    height: 80vh;
+    /* background-color: yellow; */
+    border: 3px solid black;
+    border-radius: 20px;
+    box-shadow: 5px 5px 20px black;
+}
+.sidebar h4{
+    padding: 30px;
+    font-family: 'Phudu', cursive;
+    font-weight: 700;
+}
+.list-group-item, .sidebar-content{
+    background-color: yellow;
+
+}
+.list-group-item:hover{
+    background-color: aqua;
+}
+.log-out{
+    color: rgb(201, 200, 200);
+    margin: 20px;
+    width: 80%;
+    background-color: red;
+    border: 2px solid black;
+    border-radius: 10px;
+}
