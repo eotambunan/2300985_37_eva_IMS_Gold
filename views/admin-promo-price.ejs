@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Product Detail</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Phudu:wght@300;400;700&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="/css/admin-promo-price.css" />
+        <link rel="stylesheet" href="/css/sidebar.css" />
+        <link rel="stylesheet" href="/css/footer.css" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1>Promo Price</h1>
+                </div>
+                <div class="col-md-1 offset-md-5 logo-image">
+                    <img src="/image/design_images/assets/logo.png" alt="404" />
+                </div>
+            </div>
+        </div>
+
+        <!-- data START -->
+        <section id="data">
+            <div class="row">
+                <%- include("sidebar.ejs") %>
+                <div class="col-md-8 p-5 table-product mt-5">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Title</th>
+                                <th>Discount</th>
+                                <th>Final Price</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% for( result of data ) { %>
+                            <tr>
+                                <td><%= result.id %></td>
+                                <td><%= result.title %></td>
+                                <% if (!result.tb_price.discount) { %>
+                                <td>-</td>
+                                <% } %> <% if (result.tb_price.discount) { %>
+                                <td><%= result.tb_price.discount %></td>
+                                <% } %>
+                                <td><%= result.tb_price.price %></td>
+                                <td class="td-action">
+                                    <button type="button" id="add-promo" class="btn btn-warning product-id" data-bs-toggle="modal" data-bs-target="#addPromo" data-product_id="<%= result.tb_price.product_id %>">Add Discount</button>
+                                </td>
+                            </tr>
+                            <% } %>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        <!-- data END -->
+
+        <!-- modal START -->
+        <div class="modal fade" id="addPromo" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Add Discount</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="input-group mb-3">
+                            <input type="number" id="aselole" class="form-control" aria-label="Recipient's username" aria-describedby="button-addon2" />
+                            <h5>Must be Number from 1-99</h5>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" id="save" class="btn btn-success confirm-discount">SAVE</button>
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">CANCEL</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- modal END -->
+        <%- include("footer.ejs") %>
+    </body>
+    <!-- <script src="/bootstraps/js/bootstrap.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="/js/admin-promo-price.js"></script>
+</html>

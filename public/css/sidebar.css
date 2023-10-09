@@ -1,31 +1,66 @@
-.sidebar{
+.sidebar {
     height: 100vh;
     background-color: rgb(201, 200, 200);
 }
-.sidebar-content{
+.sidebar-content {
     height: 80vh;
     /* background-color: yellow; */
     border: 3px solid black;
     border-radius: 20px;
     box-shadow: 5px 5px 20px black;
 }
-.sidebar h4{
+.sidebar h4 {
     padding: 30px;
-    font-family: 'Phudu', cursive;
+    font-family: "Phudu", cursive;
     font-weight: 700;
 }
-.list-group-item, .sidebar-content{
+.list-group-item,
+.sidebar-content {
     background-color: yellow;
-
 }
-.list-group-item:hover{
+.list-group-item:hover {
     background-color: aqua;
 }
-.log-out{
+.log-out {
     color: rgb(201, 200, 200);
     margin: 20px;
     width: 80%;
     background-color: red;
     border: 2px solid black;
     border-radius: 10px;
+}
+
+.dropend button{
+    background-color: transparent;
+    border: none;
+    border-radius: 0%;
+    color: black;
+    font-size: 20px;
+    padding: 10px;
+    text-align: left;
+    margin-left: 5px;
+}
+.dropend:hover, .dropend button:hover{
+    background-color: aqua;
+    border-radius: 0%;
+    color: black;
+}
+.dropend button:focus{
+    background-color: aqua;
+    border-radius: 0%;
+    color: black;
+}
+.dropend ul{
+    background-color: grey;
+}
+.dropend li a{
+    background-color: grey;
+    color: white;
+}
+.dropend ul,.dropend li a {
+    background-color: yellow;
+    color: black;
+}
+.dropend li :hover{
+    background-color: aqua;
 }

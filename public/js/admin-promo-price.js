@@ -2,7 +2,7 @@
 const button = document.querySelectorAll("#add-promo");
 const discount = document.getElementById("aselole");
 const submitPromo = document.getElementById("save");
-const addPromoEndPoint = "http://localhost:3000/admin/promo";
+const addPromoEndPoint = "/admin/promo-price/add";
 
 for (let i = 0; i < button.length; i++) {
     button[i].addEventListener("click", () => {

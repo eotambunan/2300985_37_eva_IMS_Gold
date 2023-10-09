@@ -6,7 +6,7 @@ const passwordReg = document.getElementById("password")
 const registerButton = document.getElementById("register-button")
 const indicator = document.getElementById("indicator")
 
-registerButton.addEventListener("click",async function(){
+registerButton.addEventListener("click",async function(event){
     event.preventDefault()
     const name = nameReg.value
     const email = emailReg.value

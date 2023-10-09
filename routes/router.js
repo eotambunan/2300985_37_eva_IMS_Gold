@@ -6,7 +6,7 @@ const {verifyTokens, extractToken} = require("../middleware/jwt")
 // admin
 const productRouter = require("./product.router")
 router.use("/admin",verifyTokens,productRouter)
-router.use("/aselole",productRouter)
+// router.use("/aselole",productRouter)
 
 // users
 const usersRouter = require("./users.router")
