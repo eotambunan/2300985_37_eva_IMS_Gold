@@ -1,0 +1,35 @@
+.navbar h5{
+    color: white;
+}
+.navbar::before{
+    content:"";
+    background-color: blue;
+
+}
+.navbar{
+    font-size: 20px;
+    z-index: 3;
+    background-color: rgba(36, 17, 204, 0.7);
+}
+.active{
+    font-weight: bold;
+    text-decoration: underline;
+}
+.navbar-logo{
+    font-weight: 700;
+}
+
+.button-login{
+    background: linear-gradient(to top, #c2c2c2, #ffffff);    
+    color: black;
+    border-radius: 50px;
+}
+.button-daftar{
+    border: none;
+    background-color: transparent;
+}
+@media(max-width:767px){
+    .username{
+        display: none;
+    }
+}

@@ -1,0 +1,42 @@
+<!-- Navbar Start -->
+<nav class="navbar navbar-dark navbar-expand-lg position-fixed w-100">
+    <div class="container-md">
+        <a class="navbar-brand navbar-logo" href="#">
+            <img src="/image/design_images/assets/logo.png" alt="Logo" width="60" class="d-inline-block align-text-center me-3" />
+            Jimboz Book Store
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link ms-3 active" href="/users/home#hero">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link ms-3" href="/users/home#promo">Promo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link ms-3" href="/users/product">Search Product</a>
+                </li>
+            </ul>
+            <div class="d-flex justify-content-end align-items-center">
+                <div class="username">
+                    <% if (dataNavbar) { %>
+                    <h5 class="my-auto mx-5">Hello <%= dataNavbar.name %></h5>
+                    <% } %>
+                </div>
+        
+                <% if (!dataNavbar) { %>
+                <a href="/users/login"><button class="button-login">Log-In</button></a>
+
+                <% } %> <% if (dataNavbar) { %>
+                <button class="button-login" id="log-out">Log-Out</button>
+                <% } %>
+            </div>
+        </div>
+    </div>
+</nav>
+<!-- Navbar End -->
+<script src="/js/partials/navbar.js"></script>

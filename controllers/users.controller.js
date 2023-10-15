@@ -1,5 +1,5 @@
-const {tb_product} = require("../models")
-const {tb_users,tb_price} = require("../models")
+// const {tb_product} = require("../models")
+const {tb_product,tb_users,tb_price,tb_promo} = require("../models")
 
 // bcrypt
 const bcrypt = require('bcrypt')
@@ -11,12 +11,13 @@ const {createTokens} = require("../middleware/jwt")
 const getUsersHome = async (req,res)=>{
     try {
         // const data = req.cookies["access-token"]
+        const dataPromo = await tb_promo.findAll()
         const dataNavbar = req.user
         if (dataNavbar) {
-            res.render("user-home",{dataNavbar})
+            res.render("user/user-home",{dataNavbar,dataPromo})
         }else{
             const dataNavbar = null
-            res.render("user-home",{dataNavbar})
+            res.render("user/user-home",{dataNavbar,dataPromo})
         }
     } catch (error) {
         res.status(400).json({
@@ -33,7 +34,7 @@ const getUsersProduct = async (req,res)=>{
                 }]
             })
             const dataNavbar = req.user
-            res.render("user-product",{data,dataNavbar})
+            res.render("user/user-product",{data,dataNavbar})
     } catch (error) {
         res.status(400).json({
             message : "ERROR",
@@ -72,7 +73,7 @@ const registration = async (req,res)=>{
 }
 
 const loginPage = async(req,res)=>{
-    res.render("user-login")
+    res.render("user/user-login")
 }
 
 const login = async(req,res)=>{

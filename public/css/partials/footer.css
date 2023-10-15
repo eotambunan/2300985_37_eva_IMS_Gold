@@ -1,0 +1,18 @@
+.footer{
+    background-color: blue;
+    height: 5vh;
+}
+.footer h3{
+    display: inline-block;
+    width: 100%;
+}
+.footer img{
+    width: 4vh;
+}
+
+@media(max-width:600px){
+    
+    .footer h3{
+        font-size: 1.2rem;
+    }
+}

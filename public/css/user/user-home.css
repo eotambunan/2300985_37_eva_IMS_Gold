@@ -1,0 +1,163 @@
+:root{
+    --hijau-lemon: rgb(81, 62, 255);
+}
+*{
+    z-index: 2;
+}
+body{
+    font-family: 'Phudu', cursive;
+}
+
+section{
+    padding-top: 4rem;
+}
+/* Hero styling */
+@media (min-width:1200px){
+    #hero{
+    background: linear-gradient(160deg,white,blue);
+    height: 100vh;
+    width: 100%;
+    padding-top: 2rem;
+    }
+    
+    .text-hero{
+        font-family: 'Concert One', cursive;    
+        font-size: 6rem;
+        letter-spacing: 1px;
+    }
+    
+    #hero img{
+        width: 60vh;
+    }
+
+    #promo{
+        background: linear-gradient(240deg,blue,white);
+        height: 80vh;
+        width: 100%;
+    }
+    h2{
+        font-family: 'Concert One', cursive;    
+        font-size: 50px;
+    
+    }
+    .carousel img{
+        border-radius: 50px;
+        height: 500px;
+        width: 800px;
+    }
+    #promo button{
+        z-index: 3;
+    }
+    .carousel-navigator{
+        height: 100px;
+        width: 80vh;
+        background-color: transparent;
+    }
+        .carousel-tombol :hover{
+        background-color: rgba(36, 17, 204, 0.8);
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+    }
+    
+}
+@media(max-width:1200px){
+    #hero{
+        background: linear-gradient(160deg,white,blue);
+        height: 100vh;
+        width: 100%;
+        padding-top: 2rem;
+        }
+        
+        .text-hero{
+            font-family: 'Concert One', cursive;    
+            font-size: 5rem;
+            letter-spacing: 1px;
+        }
+        
+        #hero img{
+            width: 50vh;
+            opacity: 30%;
+        } 
+        #promo{
+            background: linear-gradient(240deg,blue,white);
+            height: 70vh;
+            width: 100%;
+        }
+    
+        h2{
+            font-family: 'Concert One', cursive;    
+            font-size: 50px;
+        
+        }
+        .carousel img{
+            border-radius: 50px;
+            height: 40vh;
+            /* width: 800px; */
+        }
+        #promo button{
+            z-index: 3;
+        }
+        .carousel-navigator{
+            height: 100px;
+            width: 65vh;
+            background-color: transparent;
+        }
+        
+        .carousel-tombol :hover{
+            background-color: rgba(36, 17, 204, 0.8);
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+        }
+    
+}
+@media(max-width:575px){
+    #hero{
+        background: linear-gradient(160deg,white,blue);
+        height: 50vh;
+        width: 100%;
+        padding-top: 2rem;
+        }
+        
+        .text-hero{
+            font-family: 'Concert One', cursive;    
+            font-size: 2.8rem;
+            letter-spacing: 1px;
+        }
+        
+        #hero img{
+            display: none;
+        } 
+        #promo{
+            background: linear-gradient(240deg,blue,white);
+            height: 50vh;
+            width: 100%;
+        }
+    
+        h2{
+            font-family: 'Concert One', cursive;    
+            font-size: 2rem;
+        
+        }
+        .carousel img{
+            border-radius: 50px;
+            height: 27vh;
+        }
+        #promo button{
+            z-index: 3;
+        }
+        .carousel-navigator{
+            height: 100px;
+            width: 45vh;
+            background-color: transparent;
+        }        
+        .carousel-tombol :hover{
+            background-color: rgba(36, 17, 204, 0.8);
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+        }
+    
+}
+

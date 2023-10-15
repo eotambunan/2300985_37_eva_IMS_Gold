@@ -7,7 +7,7 @@ const promo = async (req,res)=>{
         }]
     })
     try {
-        res.render("admin-promo-price",{data})            
+        res.render("admin/admin-promo-price",{data})            
     } catch (error) {
         res.status(404).json({
             message : error.message
@@ -41,7 +41,7 @@ try {
 const getPromoBanner = async(req,res)=>{
     try {
         const data = await tb_promo.findAll()
-        res.render("admin-promo-banner",{data})        
+        res.render("admin/admin-promo-banner",{data})        
     } catch (error) {
         res.status(404).json({
             message : error.message,
