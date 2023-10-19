@@ -1,6 +1,6 @@
 const express = require ('express')
 const router = express.Router()
-const {verifyTokens, extractToken, verifyAdminTokens} = require("../middleware/jwt")
+const {verifyAdminTokens} = require("../middleware/jwt")
 
 
 // admin
