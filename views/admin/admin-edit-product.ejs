@@ -9,9 +9,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Phudu:wght@300;400;700&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/edit-product.css">
-    <link rel="stylesheet" href="/css/sidebar.css">
-    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/admin/admin-edit-product.css">
+    <link rel="stylesheet" href="/css/partials/sidebar.css">
+    <link rel="stylesheet" href="/css/partials/footer.css">
     <script src="/bootstraps/js/bootstrap.min.js"></script>
 </head>
 <body>
@@ -28,7 +28,7 @@
 
     <section id="edit">
       <div class="row">
-        <%- include("sidebar.ejs") %>
+        <%- include("../partials/sidebar.ejs") %>
         <div class="col-md-8 p-5 form-edit-product mt-5 form-edit-product">
           <form action="/admin/edit/<%= data.id %>" method="post" enctype="multipart/form-data">
               <div class="mb-3">
@@ -79,8 +79,8 @@
             </form>
         </div>
     </section>
-    <%- include("footer.ejs") %>
+    <%- include("../partials/footer.ejs") %>
 </body>
-<script src="/js/admin-edit.js"></script>
+<script src="/js/admin/admin-edit.js"></script>
 </html>
 

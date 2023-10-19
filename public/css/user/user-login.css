@@ -64,14 +64,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;      
 }
-#information{
-    display: none;
-    border-radius: 30px;
-    margin-top: -80px;
-    height: 10%;
-    color: white;
+  .information-log, .information-reg{
     text-align: center;
-    padding: 25px;
+    font-size: 15px;
+    color: red;
   }
 img{
   position: absolute;

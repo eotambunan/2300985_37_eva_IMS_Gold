@@ -6,13 +6,14 @@ const upload = require("../middleware/multer")
 const adminController = require('../controllers/admin.controller')
 const usersController = require("../controllers/users.controller")
 const promoController = require("../controllers/promo.controller")
+// Admin Home
+router.get("/home",adminController.getAdminHome)
+
 // registration Admin
 router.get("/registration", adminController.getAdminRegistration)
 router.post("/registration", adminController.postAdminRegistration)
 
 
-// Admin Home
-router.get("/home",adminController.getAdminHome)
 
 // Admin Log-Out
 router.post("/logout",usersController.logout)

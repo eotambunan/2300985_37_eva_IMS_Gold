@@ -33,6 +33,12 @@ section{
         font-size: 17px;
     }
 }
+@media (max-width:439px) {
+    .filter{
+        margin-top: -50px;
+        margin-bottom: 50px;
+    }
+}
 
 #product .card{
     height: 110%;

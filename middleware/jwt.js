@@ -3,7 +3,10 @@ const jwk = 'your_secret_key'
 
 const createTokens = (user)=>{
     const accessToken = sign({
-        id:user.id,name:user.name,email : user.email},
+        id:user.id,
+        name:user.name,
+        email : user.email,
+        role:user.role},
         jwk)
         return accessToken
 }
@@ -39,10 +42,21 @@ const verifyTokens = (req,res,next) =>{
         })
     }
 }
+const verifyAdminTokens = (req,res,next) =>{
+    const accessToken = req.cookies["access-token"]
+    const validToken = verify(accessToken,jwk)
+    req.user = validToken
+    if (validToken.role=="admin") {
+        return next()
+    } else if (validToken.role!="admin") {
+        res.render("error/error")
+    }
+}
 
 
 module.exports = {
     createTokens,
     extractToken,
-    verifyTokens
+    verifyTokens,
+    verifyAdminTokens
 }

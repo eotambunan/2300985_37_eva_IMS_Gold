@@ -8,8 +8,8 @@ const loginEndPoint = "http://localhost:3000/users/login"
 const login = document.getElementById("login")
 const email = document.getElementById("email")
 const password = document.getElementById("password")
-const information = document.getElementById("information")
-const notification = document.getElementById("notification")
+const informationLog = document.getElementById("information-log")
+const informationReg = document.getElementById("information-reg")
 
 login.addEventListener("click", async function(event) {
   event.preventDefault()
@@ -30,12 +30,10 @@ login.addEventListener("click", async function(event) {
           window.location.href = "/users/home"
         }else if(json.role=="admin")
         window.location.href = "/admin/home"
-      }else if(json.statusCode ==401){
-        information.setAttribute("style","display:block;background-color:red")
-        notification.innerHTML = `**Cannot Find User**`
-      }else if (json.statusCode ==402){
-        information.setAttribute("style","display:block;background-color:red")
-        notification.innerHTML = `**Wrong Password**`
+      }else if(json.statusCode ==404){
+        informationLog.innerHTML = `**Cannot Find User**`
+      }else if (json.statusCode ==401){
+        informationLog.innerHTML = `**Wrong Password**`
       }
     } catch (error) {
       console.error("Terjadi kesalahan:", error);
@@ -50,7 +48,8 @@ const emailReg = document.getElementById("email-reg")
 const passwordReg = document.getElementById("password-reg")
 const registration = document.getElementById("registration")
 
-registration.addEventListener("click",async function(){
+registration.addEventListener("click",async function(event){
+  event.preventDefault()
     const name = nameReg.value
     const email = emailReg.value
     const password = passwordReg.value
@@ -71,11 +70,10 @@ registration.addEventListener("click",async function(){
             })
             const json = await response.json()
             if(json.statusCode==401){
-              information.setAttribute("style","display:block;background-color:red")
-              notification.innerHTML = `**Email has been used**`      
+              informationReg.innerHTML = `**Email has been used**`      
             }else if(json.statusCode==200){
-              information.setAttribute("style","display:block;background-color:greenyellow;color:black")
-              notification.innerHTML = `**Succesfully registered**`      
+              informationReg.setAttribute("style","color:#76b852")
+              informationReg.innerHTML = `**Succesfully registered**`      
             }
         } catch (error) {
             console.error("Terjadi kesalahan:", error);
