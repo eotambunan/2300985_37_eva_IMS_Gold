@@ -27,6 +27,7 @@ Running the Inventory Management System Project
 User IDs:
 
 -   Admin
+
     -   Email: admin1@gmail.com
     -   Password: 123
 
@@ -40,3 +41,9 @@ This website uses a relational database that links product IDs to price IDs. Bec
 -   `ALTER SEQUENCE tb_products_id_seq RESTART INCREMENT BY 1`
 
 This ensures that the seed file configurations linking product IDs to price IDs remain consistent.
+
+TRD
+https://www.notion.so/df987a3204f0401490ed14e5eaf3234a?v=d641fa4034bc4dcbacf39e2a3b269ad3
+
+ERD
+folder : "ERD\erd.png"
